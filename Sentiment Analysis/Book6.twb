@@ -1,0 +1,1496 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20201.20.0326.1623                               -->
+<workbook original-version='18.1' source-build='2020.1.2 (20201.20.0326.1623)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='file2' inline='true' name='federated.0ime0u10t2ww3617ru0e71wn3b5l' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='file2' name='textscan.0m6d1eo0m8097t16zdxex19cbsh2'>
+            <connection class='textscan' directory='C:/Users/tejaa/PycharmProjects/dbms_assingment4' filename='file2.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0m6d1eo0m8097t16zdxex19cbsh2' name='file2.csv' table='[file2#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='integer' name='Tweet' ordinal='0' />
+            <column datatype='string' name='Match' ordinal='1' />
+            <column datatype='string' name='word polarity' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[file2.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tweet</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Tweet]</local-name>
+            <parent-name>[file2.csv]</parent-name>
+            <remote-alias>Tweet</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Match</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Match]</local-name>
+            <parent-name>[file2.csv]</parent-name>
+            <remote-alias>Match</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>word polarity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[word polarity]</local-name>
+            <parent-name>[file2.csv]</parent-name>
+            <remote-alias>word polarity</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='string' name='[Match]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[word polarity]' role='dimension' type='nominal' />
+      <column-instance column='[Match]' derivation='None' name='[none:Match:nk]' pivot='key' type='nominal' />
+      <column-instance column='[word polarity]' derivation='None' name='[none:word polarity:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.501374' measure-ordering='alphabetic' measure-percentage='0.498626' rowDisplayCount='5000' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:word polarity:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;positive&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;negative&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Match:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;anxious&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;bitch&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;complaints&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;critical&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;disappointing&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;excellence&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;favour&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;great&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;idiots&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;inspire&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;limit&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;missed&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;poor&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;qualified&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;restriction&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;shine&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;subsidized&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;thoughtless&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;welcome&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;wrong&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;accomplishments&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;bankrupt&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;cheapest&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;correct&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;desperate&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;enhance&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;fair&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;gain&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;helping&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;incredible&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;lack&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;masters&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;patient&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;profanity&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;recommendations&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;saint&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;stole&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;talent&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;urgent&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;wonderful&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;afford&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;benefits&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;coercion&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;crazy&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;died&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;envy&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;fantastic&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;good&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;honest&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;innovative&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;led&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;memorable&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;pity&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;protect&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;refunded&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;scared&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;strong&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;terrible&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;virus&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;worried&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;attack&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;boycott&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;concerns&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;deadly&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;doubt&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;excuse&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;fortunate&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;happier&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;illustrious&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;interruptions&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;loose&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;nice&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;powerful&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;radically&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;ripped&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;skill&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;sue&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;trash&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;win&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;appreciate&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;blame&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;complex&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;damage&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;disaster&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;excellent&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;fine&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;greatest&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;ignorance&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;inspiring&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;limited&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;mock&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;posh&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;questionable&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;revolt&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;shit&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;succeed&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;threat&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;well&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;affordable&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;best&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;commitment&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;creative&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;difficult&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;epidemic&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;fascist&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;goodness&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;honored&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;insensitive&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;lie&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;merit&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;plague&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;proud&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;refused&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;scary&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;struggling&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;thank&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;warm&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;worst&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;awesome&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;celebrate&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;conveniently&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;delighted&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;empathy&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;failing&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;fun&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;hell&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;inappropriate&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;joy&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;luxury&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;pain&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;privileged&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;reasonably&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;sadly&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;steady&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;supports&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;unfavorable&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;won&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;admirable&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;beauty&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;clearly&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;corruption&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;destruction&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;enjoy&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;faith&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;gained&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;hoax&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;incredulous&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;lacked&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;maturity&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;peace&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;propaganda&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;redeem&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;sane&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;strange&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;talents&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;useful&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;work&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;awarded&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;brilliant&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;congratulations&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;decline&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;elite&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;fail&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;friendly&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;hated&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;improve&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;issues&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;love&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;outbreak&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;pretty&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;realistic&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;rusty&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;sorry&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;support&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;unacceptable&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;wisdom&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;amazed&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;better&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;competitive&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;criminal&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;din&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;exceed&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;fast&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;grand&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;hypocrisy&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;insightful&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;like&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;miserable&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;plea&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;proves&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;regret&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;selfish&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;stuck&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;thankful&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;waste&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;worth&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;autonomous&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;break&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;condescending&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;deaf&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;easy&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;expel&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;fortune&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;happiness&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;impartial&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;irregular&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;losing&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;noise&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;prefer&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;rape&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;risk&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;skilled&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;suitable&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;trump&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;winner&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;available&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;breaking&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;confuse&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;death&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;educated&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;expensive&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;free&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;happy&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;important&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;isolation&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;loss&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;obsessively&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;premier&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;rapport&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;risks&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;smart&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;super&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;trust&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;winning&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;awards&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;bs&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;controversial&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;dedicated&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;emergency&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;failed&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;fuck&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;heal&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;improving&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;joke&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;lucky&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;overwhelmed&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;privilege&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;reasonable&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;sad&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;stable&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;supporting&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;unaffordable&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;wise&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;bad&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;challenging&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;cool&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;denied&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;encouraging&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;failure&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;funny&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;helped&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;incorrigible&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;kindly&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;master&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;passion&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;problem&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;recommend&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;safe&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;steal&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;sustainability&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;unstable&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;wonder&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;appropriate&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;boom&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;comprehensive&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;damn&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;discrimination&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;excited&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;fist&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;grotesque&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;illegal&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;intelligence&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;logical&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;modern&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;positive&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;racist&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;ridiculous&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;shortage&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;success&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;thrilled&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;wellbeing&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;amazing&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;bias&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;complaining&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;crisis&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;disadvantage&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;excel&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;favorite&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;grateful&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;idiot&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;inspiration&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;liked&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;miss&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;pleased&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;providence&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;restricted&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;selfishness&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;stupid&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;thoughtful&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;wasted&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;worthy&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;advanced&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;begging&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;cloud&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;covenant&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;devil&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;enjoys&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;fake&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;genuine&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;holy&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;indoctrination&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;lacks&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;meaningful&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;penalty&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;proper&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;reform&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;scandal&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;stress&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;tenacity&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;vice&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;worked&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;award&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;bright&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;confused&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;debt&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;effective&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;exquisite&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;freedom&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;hard&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;impossible&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;issue&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;lost&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;oppose&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;prestigious&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;ready&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;romantic&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;smoke&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;superior&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;unable&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;wins&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;assure&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;bored&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;concern&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;dead&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;disgusting&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;excitingly&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;flexible&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;groundbreaking&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;illuminati&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;interesting&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;lone&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;negative&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;positives&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;radical&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;right&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;simplify&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;successful&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;top&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;willing&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;advocate&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;benefit&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;cocky&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;crappy&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;die&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;enough&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;fall&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;glad&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;homage&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;innovation&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;lead&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;mediocre&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;perfect&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;properly&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;refund&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;scarcity&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;strike&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;tentative&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;victory&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;works&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='file2' name='federated.0ime0u10t2ww3617ru0e71wn3b5l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ime0u10t2ww3617ru0e71wn3b5l'>
+            <column datatype='string' name='[Match]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Match]' derivation='Count' name='[cnt:Match:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Match]' derivation='None' name='[none:Match:nk]' pivot='key' type='nominal' />
+            <column-instance column='[word polarity]' derivation='None' name='[none:word polarity:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[word polarity]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0ime0u10t2ww3617ru0e71wn3b5l].[none:Match:nk]' direction='ASC' using='[federated.0ime0u10t2ww3617ru0e71wn3b5l].[sum:Number of Records:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ime0u10t2ww3617ru0e71wn3b5l].[none:Match:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ime0u10t2ww3617ru0e71wn3b5l].[cnt:Match:qk]</rows>
+        <cols>([federated.0ime0u10t2ww3617ru0e71wn3b5l].[none:word polarity:nk] / [federated.0ime0u10t2ww3617ru0e71wn3b5l].[none:Match:nk])</cols>
+      </table>
+      <simple-id uuid='{D656C7B8-4101-4E92-AB0B-FB0DE04B5FE9}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ime0u10t2ww3617ru0e71wn3b5l].[none:Match:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ime0u10t2ww3617ru0e71wn3b5l].[none:Match:nk]</field>
+            <field>[federated.0ime0u10t2ww3617ru0e71wn3b5l].[none:word polarity:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3281E0D2-B6A6-4F4B-9AC0-CC206FEF66D1}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAbr0lEQVR4nO3dWWwk+X3Y8W8dXdX3yWazed9zz+7qyC6QlWRZ0MYIguhFgSAYykuQ6CXH
+      Q4AASYC8GXYCxMiDAxh5CJAEORwkcBRZkm04hp1I3kPSHjOznBned7PZB/u+qqsqD6Nlk0tO
+      13DMY6n6f4B94H9/rPmzun71P6tasm3bRhBcSr7qCgjCVRIJILiaSADhM8hmZXX1uf93dXXl
+      RNnG8iLFSg3rlB693W3w6PGz38luLbG4vkezlOWdDz5GPb9KC8ILsE0+erCA0SwzMjJMpQ27
+      m+ukxqapZlfBG6dTK7KwnmFmepq3f/yntDoy9+/f4sHDj0lP3mThow+Rui1Wd/LMjSZ4slFC
+      Uw023nmbO699EbkLfqXL1K276IrMxtMFAskbAKxvrLFRsKmlQjx8uiJaAOGSSQrbWxuUs1v8
+      yZ+9y+bTB4y/+iZPH7zH4toe0wM2dmiCgYgfgEzugImoxPe+/yOmX/0yCx++B9hkMhmym4us
+      LC0THr+BXS2h6SFu3bpFZv0pa7v7aLIMts1WrsZ4MviLCsgENYmyKeNTES2AcPluTKZpe2/T
+      Xlzhy196jR+/9/+Yvft5OvUqsfQMxvJ7ROKDANSK+6xGEnzjb7zFRx/8OTfvfYFmeQ+zWWNo
+      ZIL0YJLQYJRKY5xRr5cnT1a5NxFnoZNGkqDbKoEeRZEkAJKpYcbGFLarGjPTFpKYBhU+y5aW
+      lpidm0M6w+88fvgh07fuo6sy9WKGlj5AIuA5NVYkgOBq59YFsm2bdquF4tGQJZuOYeLVPTSb
+      bTSPTK3RplgsMjo8RLNtEAwEABtsC8O08eraeVVFEF7Y+Y0B7Cofvb+KJ6jilbvYNngUhWzd
+      4P7sKPsHNXa2toiG/BQrFXb3VCSrSTW/x16pya98/a8R0pVzq44gvIhznQXSvT5URcZGQtc8
+      eKNJEprBfqmJovmIhUOoigyKD7u+hxZM4PGFeOXVV/CqZ+nlCcL5OL8WQAJZUZifn0GhS61p
+      EA54KXk1otEwlg1GLICk6kwEo9ipBLKmYSdDVBsdVFkkgHD5zm0Q3Gw26XQ653EoQbg0Z04A
+      2zJpGyYKFvVmi2Ao/KxbIwjX0Jm7QJsrj9mvewhpHUKRBL5AGFWMXYVr6kwJUD/Isldu0+m0
+      mBgcJJPdBk+IoYQfsZwgXEdnSgA9GOXGtMLKZpZOx8BGQlEVFEU0AcL1JFaCBVcTo1fB1UQC
+      CK4mEkBwNZEAgquJBBBcTSSA4GoiAQRXEwkguJpIAMHVRAIIriYSQHC1M2+HrhZ32SqYDPgt
+      MvkK83fu4FNFHgnX05k2w9lmhyeLK9iSB1WymJoYYCtrMjEaF9uhhWvpTC1AtVSk1W6xl88x
+      kU7QajSQPSGxHVq4ts6+Hdq2KJVraLLJ9n6J2ZkpxPPswnUlngcQXE2MXgVXEwkguJpIAMHV
+      RAIIriYSQHA1kQCCq4kEEFxNJIDgaiIBBFcTCSC42pk2w5lGm+XlFfRQnIBssF+qMjkzT0AX
+      37YqXE9nunJl1UM6nWJtM0vVquPxx9E9CrZti+3QwrV0pgSQJJmuYQA2t+9/gXZll9WNArMT
+      4nkA4Xo6025Qo1VjcXkdzR/Gr3QplOvM3bqDzyOGEsL1JLZDC64mbt2Cq4kEEFxNJIDgaiIB
+      BFcTCSC4mkgAwdVEAgiuJhJAcDWRAIKriQQQXO1MCWDbNl3DwDQtbNvC6HYvql6CcCnOtBvU
+      6rZZW9ugVG0R9cs02x2Gpu4yGNEvqn6CcKHOlACKx4uuWKB4sGUPt2+Ps7lzQCKYFNuhhWvp
+      TAlgtGpUmyaWYSDpJg8fPGV0/hXxenTh2hLboQVXE7NAgquJBBBcTSSA4GonEsC2LAzDoGua
+      V1EfQbhUJ2aBPnj3z9jarxIbmuDLr796FXUShEtzrAXI7yzz8wdLtA0DU7QAggscawEGRmb5
+      ylc6zNy4zeKThauqkyBcmhNjAMVs8qMf/ZBMoXEV9RGES3WsBbBtGyUQ49feeoWtrc2rqpMg
+      XJpjCWC26/zJH/2AgaEJ0hOzTF1VrQThkhzrAqneIG++8TrFYo69vexV1UkQLs2JadC2pTA5
+      Mkj1lFkgy2izuLSE7A0TUk2KtaZ4PbpwrR27cuulHLakEEuOMBIeOBEsKR5mZ2d4vLhOlxbI
+      XlRFxrIssR1auJaOJUCtXGBldY1gKMJ8cvhEsG12eLy4xvzNG2B2MZt5NraKzE0mkCTp0iot
+      COflU+sA09w4qLGTybK4ssHU6NCxYKPTxrZMtrZ2iXglcqU6s/PD4uIXrq1jCbDx8Xv8+XtL
+      pOIhEpGT/Xo9EOH+/XuHPyfTF19BQbhIxx6IMc0ulg0eVQxqBXc4dqVvPX2fH/zkEV+4f4dg
+      LMmd+emrqpcgXIpjCTBx8wt8zdYJRBKomu+q6iQIl+bYQpgkyxwcFPEHAiw8enBVdRKES3Ni
+      M9zNmSnefecdBoYnr6A6gnC5TrwVwjA6eDwahmHg8Xiuql6CcCmOb4brNPi9//pfGJ+a56DW
+      5ht//etXVS9BuBTHukCyqjM/Pcl+Ls/QyOhV1UkQLs2xFkCSFWTNx+uv30L3+a+qToJwaU4M
+      ghNhPx9+9CFLa1tXUR9BuFQnlnxt26bdbLK7uwfcP/b/TKPF4tIytuon7pfZy5eZv3MPv0e8
+      Xki4np6750FRT17UsqozMzXB09VdynWJuzfH2dwtMDEaF9uhhWvpRAKkhkcIbWSZvnPvRLDV
+      afB0bZfbt+dZXFigXquhaBHxdmjh2jpxm//o4QJvfOlLbC2ffC2KaVnIlsHa+jaTE6PkKhZj
+      Q+FLqaggXIQTC2HV/C5vv/+I8dk73Jweuap6CcKlONYCrC38jLpngLfeeouDvfUrqpIgXJ5j
+      Y4BkKs0P/vB/4VEVUpM3rqpOgnBpxDfECK4mJvAFVxMJILiaSADB1UQCCK4mEkBwNZEAgquJ
+      BBBc7cwJ0KxVaHctaqUCS0tLNDviu8SE6+tMCWB1Oyw//pB8rcv65iahSAxdPAsgXGNnXgku
+      Z5ao+SaIKk0KuR0sfZixoZB4HkC4ls70EtBup8na5h5GQMYOwkGlxdiMTzwPIFxbYi+Q4Gqi
+      Ay+4mkgAwdVEAgiuJhJAcDWRAIKriQQQXE0kgOBqIgEEVxMJILiaSADB1UQCCK52pgSwTYOH
+      P/sJ+1WDnfUlPnj/fapt8TyAcH2d7SvhZZWx4UHqpk29bXPv7jSbO3n84wNiO7RwLZ0tAbDp
+      drt0uyZmt0MxV8ATSInt0MK1dbYnwowO5baKWc8zMzNNWwoyNhi8qLoJwoUTzwMIriZmgQRX
+      EwkguJpIAMHVRAIIriYSQHA1kQCCq4kEEFxNJIDgamfcCiEIl6+0U6DTaB/+HBqMIPk1diul
+      wzJFlpmIJdhZfMTRld2hyTlUsw7NYq9QC0JwiOaDhyIBhM++hT9+n9xy5vDnV77xBp4bSX7v
+      w58dlgU0jX/4pa/xR//+t+HI5oZv/pPfIlx9DGt/2jtg6j7c/ia5f/mvXr4LtLOxwscLC9Tb
+      3Zc9hCBcuZduAWq1GratosgypvnsmQCxrejlSKaF1DR6BbKE5dcoZXfotluHxaGBFF7df2ps
+      uW3RtXrFQU1GsWo0Siu9UEUjGL9FvbSMadQPy33hcTQ1cupxjXoV2+yVq74Akqxg1Cu9+ksy
+      nlAUc2cHu9E4LFdSKWSfD6Xc66rYsowZT2BU21hG71kST0DD8qiU270/QpYg5pX59GVlWRam
+      aR0rs23odk/ejE3TwrLsY3d6y7axfhH70gkwPj2P3S6yuV1kbjLxsocRALvcwHy40Svw66hf
+      nOPt3/+P5LZWD4u/8u3vMjV2B/Phei/Wp6H+lXne3ayQq/cu1DenwkSaj/npD7/bO2x4jC9/
+      6w94/JPf5CD7wWH5/V/5DdLJr2J+tNY7rteD+voNdh7/nGYxd1g8dO91PP4AW+/2uhSq18/M
+      V/8mhf/wn2gvLByWx7/7dwncugk//IMjf1sA5VvfZvuDTerZXhKlvziFkYryh08Pen+aR+Zv
+      3R9Ako6fL0mSUORPdV4kTt2Wr8gyknz8AJIkHca+dAI0KgfslxrMzg4jfbqGwpnYnDx/p51T
+      CYlTQp8TezpJOv0Yz409UXb6r59+DUgnYqVPDnJK+WmHOL0OJyshPa8Op9T3aB1eOgESqWES
+      qZf97Ytld+tY7f1egayj+IbZKm3S6fZmE4bCaWxTI1OoHpbpHpXxVITNbJm20WtS04kQutyi
+      Xt48LFNUL6H4LJVsCfNIbCARwiO3sQ56sag6ysAcrb0iVqcXqw2ExVz0FfqlnAXqVh/TXP/d
+      w59l3zjBm/+C3/m//5qtUq+r8Y+/+s/oVIb5rf/848OyqXSUf/MPfo3f/u9vs5bp9V3/6a+/
+      yVRgiff/+B8dloXic7z5zf/J+//jx5R3e9NsX/z2Vxj0r9H83t/v1SExQ+Bvf4+d//Z/aG71
+      uhRj33mL0Nhn9E7iAuLmI7iaSADB1c6tC9R++9+ijL3BT8uD/Lv//f5h+exonH/+nS+x+ju/
+      T6dQPiwf+/WvUw9IPHnQm40IRaK89sZf5Ye/+5tUCr0+/Je/9fcYjkrw9Pu9fzA4BK98h3e/
+      /3eol9cPi+//ym8QCfxS9uyEC3BuV4rdroHZoW2YFKvNw/JK/dmgs1tt0K305oitrollSrRb
+      vXlur68DQLNWpXFkmdvsGmDJ0OkNVjHCAHRaRdqNXp/aMtvn+WcJv+REF0hwNZEAgqu9dAJ0
+      O00y2fx51kUQLt1LJ8Dy0gp2q8h2ru4cLAifUS+dALKqM5hO0anVzrM+gnCpXjoBfB6bh4+W
+      SaQHzrM+gnCpXnq+cGx6nrHzrIkgXIFzeTeoaZq08ht0JI26qZEt9sYFXl1lZCBEe6+I3e3t
+      /9YGIliKRLPRi1UUFX8wSCm782zu/xdCiRS6KkHryGNtiobtG6BeWsE8ssHNHx5DVRSsTm9t
+      QJI1JD3NTnmLjtk5LE8Fh7Atjb1CrxunaQpjyTBbuQqdTq++Q4kgutyiUdnqVUHVCURnqOUq
+      xzbD+eNBPFIb68jGOUn1IsVn6OyXsDq9v01LhJE1DzR79UKWwK9TzmXodo48ChhPomm+U2Mr
+      bRPD7H2UIV1Btho0yr29T7KiEYzN0iiv0zV6azK+0AgeNXTqcY1G9XDvPIDHFwBJxmj01mQk
+      WUYLRjAze1jN3hqQkkwie3WkSvnIcRXsWAyj1sb81PMAtqpQbvXKZEki5lOoF6p0271z5osG
+      QFcpHrl2ZFkiFQyT316HIw9FRlMjqHYb2r2t16h+bG8UY23tfF+O+8mhPr0t1bbtU8tErIg9
+      z9jTnPb7R8sv6O3QbbJ7TRIxhVJdZiAe6BPbJbNbJD08+ALHtSkWCpQKeZLjs4S8/XpwJgsP
+      HmHaNqo/wvzMJIr8vBNms7O+ijcYQgsmCHn7fd9Bh+xencGkzn6hS2ow3Ce2S2a3QHrYaben
+      zc7mGtl8CU2VSU3cIBnx9Y3PbK3j0QNooRhhn+e5kbubq+zlS+iqTHJ8jsFov8/CZGNtk8Hh
+      Ubya6nCB2eztbKCofrRQlIhfe25kqZCj3nrWukRiAwT9+rnEQpfsXonBwRDZXIOhVOz5f5nR
+      YnNnn9GxEVRFOXxG4EIWwgrZHR4+eMSTxTVU/fkfzie21hb5eOEJ1SNP/p+uw9MHj7AUm+yR
+      p4lO18XEy/xUkvxuntLR5v2U4+5u73JwkGd396BPHBzkMjx88JCFx0t4fP0+HACJ3Y0VPl54
+      TLnW6hs3Mj6KR/VzczZNPu80s9ZlL5OhWMizvV3sGzk8PoZH9XFjdpiC43EV0kMDfPDTt/no
+      0WOH57277Gf3KORy7Gz3Xw8KRWOEQyGCwSAeT/8vUzkWq/aPrR7kn30WC4vPupF9KB4v8aCH
+      t3/yFzx+ssInD1ReSAIkUhOMjURRVA3F8V+Q0BSZUMhLvenwfWO2wuTN2ySjceLxfndIAJ3B
+      uM6TjTL3X7tJ1Pf8OxRoDKQGaDQNhoejfY8aS45x7/48Xo964lG7kyR0XSEU0Kk2nF4e4GEo
+      GWJ1t87spNPMmkI0GqNtK8xNJx2POzIUYWmrzMxk/9h8dpt33v2AxOAQ42OjqH3+vHK5RiSc
+      oCurzE4P9a+tomBbJq1qjg2HG8wnse1qnvXd/skdig0yPZlGVtQ+rTuATa1SJHvQ5LXPfY7J
+      0aHDUcIFbYUwabYthofTeB0yHiwatRrLKxuYttUnzqZRb1Le3+DRyh7Bvhc0QIedTJFoOICq
+      6Q4nyKDagPmJBJkXaFlWHi8gqRL7+1WHWItmo87S8vqJh7hPi93azpAcSGBbTrES4WgMs15k
+      r+BUB5PN9TU0GbYcLr5wNEI4HGd0MEg230DXnt/FzO9t8HhpE8nuUmv0a93g2WdXp9G2CAWc
+      Ws1nsfWOSTjgdYytNdoMDw8T7Nsa2zTrTbxeL61mE83v45Or8oISQEGTu2QyGRodpw9TZerG
+      PGMjI0QC/S/qZrOGFkoyOZJ8gQtKwTTbNBoNTNNpmKORSnh5tHrAxHDEIdZDajhFo95lcDDk
+      EKsyOjnNyOgYw46xEsGAxuryMtWmU1fQolyqMDA6y2iy3xjk2XF13cPWdgafw8Wn6SEGEj42
+      dw8YGen/ooOZG/eZnkg+29XrcHo/fvBzVtZ20bwBxwQ4jNWdY0Em6FPZ2d6hXO+XhDKxeJiN
+      9XUajeax+l5QAhgc5Epoukze8Q5lkCs2GR0dwdfnjgMSiWSS/F4G1eNBdhig1WsNxsbHCYVC
+      qKrTn9lhd6/EyNAAluPdt0P5oIqiWOzvO7UWHfLFJpPDQRZXsg6vjTEoFUtoKhSKzT5xNpVy
+      FZ/fh9lpUO87tnlGkhUmJ0exHW8EFrVKmUa1Ts0xCU3abQOJLrlc//Mwd+MW8XiETqtx4hUn
+      J2NvE/vFQN15dsak1qwiWRL5/VLfSMXjZ35mkmA4eOzauaAE8DI2laZc6TCa7t+nBgWvx2Z7
+      e5tmx6mfLOP3KiwvLePUsHh9Hhotk1QqTrvhdJEo2LZBqVSi0+3fDcvnDhgamyaRSDE97vQ6
+      GAWfBlu7JehWaPdttTRmb93Cq+sMJvt98aBEOOKjY6iMj8TJ5V+sG7a2uknb8fxamLaMZbWp
+      lhoOsR5mbtwiGAgxOdF/bKHpOqbRptmssOUwYNZ0nXbrgGqpyrZDLKgMpYaot1uMjfefRWzX
+      D3j08485qB5QOjLZcgFPjtjsZ3axPX7i0WeLZPS9A1vUaw28oeALvFjLwFYjfO5OkO1shdBE
+      /DlxEopiUtgr0O4UkaQUsVi/6T+QrS71SplGxyLSJ7RW3mdx5YCR0QG0YIxosH8/tdFooHok
+      YukbePvOalhUS2W6po1h9J8MKBfyrKyuUK3FmJi71TcWJJLDM9yMeim3nWbkFEJBH5FoHG/E
+      qctmsLa8CjRY39jn1my6T6xKIhFB9wXw+J26bAoDiQFW1/e5+4XJvpHF3B7NjkQyGce2+p8z
+      zR8hNRyjUmkxMdLral9ACyAxmB6inNujWCjQMpwbskbT6W7zCY14VGMz12Jy9Plzvs/4SAz4
+      oKuQGHLq11uomg/LMmj27UtKTM7e41e/9iZ37txxvPjBxrZBkqUX6FrZZDO7yN4gIYcBfiSR
+      JJ1Oc3tumJ2d/jMlAIX9DOubWxiO46YuBwdFSsWiY7cGVCJhH6Pjc6SHnncj+oRJpdpid3uF
+      TKb/QBxMGi2ZRFyjkOvfrTkLq9umK6vIZhfzyCDggrpAXUzDxjQ7VCr9Lm6LaqXJ1PQUgYAf
+      xXHO1KJrmHTqZQ6q/frJAB3y2TyqJlMqO/VnVWKJKLGBIZJxv0OshOowP31UKDbAzduvMuo4
+      CJYZmxhnf3eDct2pvhp+3eTh4g5jo85v5UuPTTI+Nk7Q59TgKwwPT+CLxJmfdlqYlBidnCES
+      jRENOg1WFVSpTSI5RiTm9L3SCrrHZGhkhli8/zmLJ1NIVhMZmVa7fwtgGm3ahoXdrvN0eYNP
+      oi8oAWQmb97h9s0bxMP95uslgiE/iqqRTA05DIIBLHa2tlADMWKOd1+d26/dx6PojKb7Nbs2
+      XaNBvthkdHQU3wss3L04iWa5wMLjJw4LYc9UKmXi8SS67nQeuuzvZQn6vOw4zJWDTK24w88e
+      LOFzXLizWV9fx6t7aB/Zr/SXZ1GplqmUq5QOnMYsNv5AhGpx/3BF+PlMqtUymZ0MRYfjerxB
+      /LqMpAeZnRw5vPAvaCV4k3ffeZ+V1TWanX6ZKSFJCrZR472/+AlZx4GXwtBwmnJ+7wVWjQ0W
+      F5bomDZdo//gL79fQPfK7Ozs0jzvt13LMnTbGLbTqe5SrzbRVJu9Pafuh0w0GiazlyPucJcE
+      G0n1cXt2jHLN6ZzJ3Lx9G7/Pe/Ldm38pMpFIhOx+jmjMqb7PXn6LImO0nJJQIRJNMTw6SCLe
+      f2zRaVTQw4MMBDVaZu91iRfy+oREapKvfnUc3fsid9Mu2XyV0bExgi8QPzEzz/T8i3w4Cs1m
+      FW/Q5zBPLTE0kmb3vQ/xhYJY57o1yqJWbzOUDvL4o8e8/sZdtOd2nzRuv/IK+f09kn3n4G0e
+      ffQe5arK1PQkPt3pXJiUDwoYhklXlUjF+nXxJEIRp1m7l2FiWH7efGOcld0aqb4TEjJDI6Mv
+      eFyLYqFEYiBIuVIn2ee4WiCK/2AbS48RP9Jlu6D3hyjofTeUHSUR8HuxkFEdxwAyp7wA+DlM
+      vL4wyWQS3XE1WqLTaePDqX96Vir3X72HDSRToDrcVb0+H6MTU45HTQ+PYO7UCAQCL3DOPIyO
+      jZLJ15ifu6pXMCqossGT5S1S43PneFyJkbFRJAkCnv5bY0yjxU72gOmpEKZlHX4Wn4G3QqjM
+      3rzJ3Ow0XscxwNmOG/BJrK9vvMD6gkI8GiQSDtLunmcLIOHz+/H/4j/Zce/Qiynm9slkMuzs
+      7NBw7CbAwNAY9+7eQndcELwoJoapcnNuzHHB6mxkagd7fPDwCbqv/5hQ8fiIBVVyB8e7l5+B
+      BLgoHcrFKuGgTuHAaQD6bBV2dzdDreo8WL1aEnO3X2VqfIBEPIZ1LT5CBb8Xni7vkE47TZme
+      hYWsBXjt7jzlSv+XM3QaJUxPFJ/dotrq3RCvw9l7STo3X7mLqngY6ruyCqBx7/OfZ3J6jqmR
+      i+gDnzeLRr1KIZcjt192Dr9yNrrXj1fFYc/OWVkcFPfIZooUC/0nDlRNp1kpUK432F7fPJwG
+      vaAHYoSLVjnIkys1mJocc9gX9VlgUcjlabcq1Loh5qfObyyS3VllY/uAG/fuEun78MzpRAII
+      l8CmUq5Qq1aIDaZfYL3n8vwSd4GEz44um+vrlMo51tazV12ZYz47qSj8EvOQSg0QCEdBOXs3
+      5SKJLpDgaqILJLiaSADB1UQCCK4mEkBwNZEAgquJBBBcTSSA4GoiAQRXEwkguJpIAMHVRAII
+      riYSQHA1kQCCq4kEEFzt/wOeuf6haKOzXwAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
